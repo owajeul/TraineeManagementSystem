@@ -1,8 +1,42 @@
-﻿@{
+﻿@model List<Trainee>
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Trainee Management</h2>
+    <div class="mt-3 mb-3">
+        <a asp-action="Create" asp-controller="TraineeManagement" class="btn btn-success">Add New Trainee</a>
+    </div>
+    <table class="table table-sm table-striped table-bordered">
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>University</th>
+                <th>Technology</th>
+                <th>Phone</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var trainee in Model)
+            {
+                <tr>
+                    <td>@trainee.Id</td>
+                    <td>@trainee.Name</td>
+                    <td>@trainee.Email</td>
+                    <td>@trainee.University</td>
+                    <td>@trainee.Technology</td>
+                    <td>@trainee.Phone</td>
+                    <td>
+                        <a asp-action="Edit" asp-controller="TraineeManagement" asp-route-id="@trainee.Id" class="btn btn-warning btn-sm">Edit</a>
+                        <a asp-action="Delete" asp-controller="TraineeManagement" asp-route-id="@trainee.Id" class="btn btn-danger btn-sm">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
 </div>
