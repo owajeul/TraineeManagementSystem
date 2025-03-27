@@ -25,10 +25,10 @@ namespace TraineeManagementSystem.Controllers
                 return View(trainee);
             }
             _db.Add(trainee);
+            TempData["ToastrMessage"] = "Trainee added successfully";
+            TempData["ToastrType"] = "success";
             return RedirectToAction("Index", "Home");
         } 
-
-
 
         public IActionResult Edit(int Id)
         {
@@ -44,6 +44,8 @@ namespace TraineeManagementSystem.Controllers
                 return View(trainee);
             }
             _db.Update(trainee);
+            TempData["ToastrMessage"] = "Trainee updated successfully";
+            TempData["ToastrType"] = "success";
             return RedirectToAction("Index", "Home");
         }
 
@@ -67,11 +69,10 @@ namespace TraineeManagementSystem.Controllers
                 return NotFound(); 
             }
 
-            _db.Remove(trainee);  
-
+            _db.Remove(trainee);
+            TempData["ToastrMessage"] = "Trainee deleted successfully";
+            TempData["ToastrType"] = "success";
             return RedirectToAction("Index", "Home");  
         }
-
-
     }
 }
