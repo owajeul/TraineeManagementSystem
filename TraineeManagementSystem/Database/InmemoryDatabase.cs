@@ -44,7 +44,11 @@ namespace TraineeManagementSystem.Database
                 traineeToUpdate.University = trainee.University;
                 traineeToUpdate.Name = trainee.Name;
                 traineeToUpdate.Phone = trainee.Phone;
+                traineeToUpdate.Email = trainee.Email;
+                traineeToUpdate.Technology = trainee.Technology;
             }
         }
+
+        
     }
 }
