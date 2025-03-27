@@ -8,9 +8,8 @@
     <h2 class="text-center mb-4">Edit Trainee</h2>
 
     <div class="card shadow-lg p-4">
-        <form asp-action="Edit" method="post">
-            <!-- Hidden field for ID (needed for updates) -->
-            <input type="hidden" asp-for="Id" />
+        <form asp-action="Edit" asp-controller="TraineeManagement" method="post">
+            <input type="hidden" asp-for="Id" value="@Model.Id"/>
 
             <div class="mb-2">
                 <label asp-for="Name" class="form-label">Name</label>
