@@ -27,6 +27,7 @@ namespace TraineeManagementSystem.Database
         }
         public void Add(Trainee trainee)
         {
+            trainee.Id = db.Max(t => t.Id) + 1;
             db.Add(trainee);
         }
 
