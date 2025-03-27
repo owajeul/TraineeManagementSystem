@@ -9,9 +9,8 @@ namespace TraineeManagementSystem.Database
         {
             db = new List<Trainee>
             {
-                    new Trainee { Id = 1, Name = "John Doe", University = "XYZ University", Technology = "C#", Phone = "1234567890", Email = "john.doe@example.com" },
-                    new Trainee { Id = 2, Name = "Jane Smith", University = "ABC University", Technology = "JavaScript", Phone = "0987654321", Email = "jane.smith@example.com" },
-                    new Trainee { Id = 3, Name = "Sam Wilson", University = "DEF University", Technology = "Python", Phone = "1122334455", Email = "sam.wilson@example.com" }
+                    new Trainee { Id = 1, Name = "Owajeul Islam", University = "Islamic University", Technology = "ASP.NET Core", Phone = "01791233445", Email = "owajeul@gmail.com" },
+                    new Trainee { Id = 2, Name = "Nahid", University = "Daffodil University", Technology = "ASP.NET Core", Phone = "0987654321", Email = "Nahid@gmail.com" },
             };
 
         }
